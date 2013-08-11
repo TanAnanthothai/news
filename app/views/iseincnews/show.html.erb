@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @iseincnews.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @iseincnews.description %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag @iseincnews.image %>
+</p>
+
+<%= link_to 'Edit', edit_iseincnews_path(@iseincnews) %> |
+<%= link_to 'Back', iseincnews_index_path %>
