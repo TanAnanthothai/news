@@ -629,7 +629,7 @@
 
                     <div id="#container-spn" class="span11 clubnews">
                         <div class="span3">
-                        <div><span style="color:#8f1f22;">I</span><span style="color:#982b30;">S</span><span style="color:#a0373d;">E</span><span style="color:#a9434b;"> </span><span style="color:#b14f58;">I</span><span style="color:#ba5b66;">n</span><span style="color:#c36773;">c</span><span style="color:#cb7281;">.</span><span style="color:#d47e8e;"> </span><span style="color:#dd8a9c;">N</span><span style="color:#e596a9;">e</span><span style="color:#eea2b7;">w</span><span style="color:#f6aec4;">s</span><span style="color:#ffbad2;">+</span></div>
+                        <div><span style="color:#8f1f22;"></span><span style="color:#982b30;"></span><span style="color:#a0373d;"></span><span style="color:#a9434b;"> </span><span style="color:#b14f58;"></span><span style="color:#ba5b66;"></span><span style="color:#c36773;"></span><span style="color:#cb7281;"></span><span style="color:#d47e8e;"> </span><span style="color:#dd8a9c;"></span><span style="color:#e596a9;"></span><span style="color:#eea2b7;"></span><span style="color:#f6aec4;"></span><span style="color:#ffbad2;"></span></div>
                         
                         </div>
                        <div class="offset7 span2" style="font-size:20px">
@@ -686,7 +686,7 @@
                 <%= time_ago_in_words iseincnews.created_at %> ago 
                 <%= link_to 'Show', iseincnews %>
                 <%= link_to 'Edit', edit_iseincnews_path(iseincnews) %>
-                <%= button_to 'Delete', iseincnews, method: :delete, data: { confirm: 'Are you sure?' } %>
+                
             
 
               </p>
@@ -699,7 +699,10 @@
 
                     <%=h truncate(iseincnews.description, :length => 300) %> 
                     
-                    <br><span style="color:#8f1f22">.... Read more -> </span>
+                    <br>
+
+                    <span style="color:#8f1f22">.... Read more -> </span>
+                    <%= button_to 'Delete', iseincnews, method: :delete, data: { confirm: 'Are you sure?' } %>
 
                </p>
 

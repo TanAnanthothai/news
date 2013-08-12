@@ -20,13 +20,17 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1/edit
   def edit
+    
+        
   end
 
   # POST /blogs
   # POST /blogs.json
   def create
-    raise ' '
-    @blog = Blog.new(blog_params)
+    
+    @blog = Blog.new
+    @blog.title = params[:blog][:title]
+    @blog.content = params[:blog][:content]
 
     respond_to do |format|
       if @blog.save
@@ -42,6 +46,8 @@ class BlogsController < ApplicationController
   # PATCH/PUT /blogs/1
   # PATCH/PUT /blogs/1.json
   def update
+    @blog.title = params[:blog][:title]
+    @blog.content = params[:blog][:content]
     respond_to do |format|
       if @blog.update(blog_params)
         format.html { redirect_to @blog, notice: 'Blog was successfully updated.' }
